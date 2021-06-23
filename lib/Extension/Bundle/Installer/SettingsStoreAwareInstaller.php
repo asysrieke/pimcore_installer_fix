@@ -104,10 +104,6 @@ abstract class SettingsStoreAwareInstaller extends AbstractInstaller
                     $migrationResult = new ExecutionResult($version, Direction::UP);
                     $this->dependencyFactory->getMetadataStorage()->complete($migrationResult);
                 }
-
-                if ((string)$version === $migrationVersion) {
-                    break;
-                }
             }
         }
 
